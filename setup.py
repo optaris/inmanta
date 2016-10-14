@@ -34,7 +34,8 @@ setup(
     dependency_links=['https://github.com/inmanta/motorengine/tarball/inmanta#egg=motorengine-0.9.1dev0'],
     install_requires=requires,
     tests_requires=requires + [
-        "pytest"
+        "pytest",
+        "mypy-lang"
     ],
     setup_requires=['tox-setuptools', 'tox'],
 
