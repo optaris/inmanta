@@ -10,14 +10,15 @@ requires=[
         'ply',
         'ruamel.yaml',
         'virtualenv',
-        'motorengine == 0.9.1dev0',
+        'motorengine',
+        'pymongo == 2.7',
         'blessings']
 
 setup(
     name="inmanta",
     package_dir={"" : "src"},
     packages=find_packages("src"),
-    version="2016.4.4",
+    version="2016.4.5",
     description="Inmanta Deployment Platform",
     author="Inmanta",
     author_email="code@inmanta.com",
@@ -27,12 +28,11 @@ setup(
     package_data={"" : ["misc/*", "docs/*"]},
     include_package_data=True,
 
-    dependency_links=['https://packages.inmanta.com/misc/motorengine-0.9.1dev0.tar.gz#egg=motorengine-0.9.1dev0'],
     install_requires=requires,
     tests_requires=requires + [
         'mongobox'
     ],
-    setup_requires=['tox-setuptools', 'tox', 'sphinx', 'sphinx-argparse'],
+    setup_requires=['tox-setuptools', 'tox'],
 
     entry_points={
     'console_scripts': [
